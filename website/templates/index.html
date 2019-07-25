@@ -3,4 +3,25 @@
 
 <h1>Ideias Malucas</h1>
 
-{% endblock %}
+<form action ="/" method ="post">
+    {% csrf_token %}
+    <label>Nome</label>
+    <input type ="text" name ="nome" required>
+
+    <label>Sobrenome</label>
+    <input type="text" name="sobrenome" required>
+
+    <label>E-mail</label>
+    <input type="email" name="email" required>
+
+    <label>Gênero</label>
+    <select name="genero">
+        <option value="F">Feminino</option>
+        <option value="M">Masculino</option>
+        <option value="O">Outro</option>
+    </select>
+
+    <input type ="submit" value="Cadastrar">
+</form>
+
+{% endblock %} 
